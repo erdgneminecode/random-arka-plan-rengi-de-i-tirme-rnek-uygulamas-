@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        }
+     #div1{
+        font-size: 100px;
+        color: darkred;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        justify-content: 
+        center;
+        align-items: center;
+      border-radius: 15px;
+        
+     }
+    </style>
+</head>
+<body id="arkaplan">
+    <div id="div1">I AM JAVASCPRIT</div>
+    <script>
+        var text;
+        function renkUretme()
+        {
+            var a="ABCDEF0987654321";
+            text="#";
+            for(i=0;i<6;i++)
+        {
+            var random=Math.round( Math.random()*15);
+            text+=a.charAt(random);// random sayı örneğin 5 charat 5.indexe gidip ordaki değeri alıyor.yani F'yi yazıyor.
+        }
+        }
+        setInterval(function() {
+            renkUretme();//yani 2 saniyede bir random renk üret.
+            document.getElementById("arkaplan").style.backgroundColor=text;
+        },2000 );
+    </script>
+</body>
+</html>
